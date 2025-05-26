@@ -17,8 +17,8 @@ body {
 }
 
 #cursor {
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -670,7 +670,7 @@ body {
 #img {
     height: 50vh;
     width: 50vw;
-    background-image: url(./Screenshot\ 2025-04-11\ 081252.png);
+    background-image: url(./Screenshot\ 2025-05-25\ 153634.png);
     background-size: cover;
     border-radius: 10px;
     display: flex;
@@ -694,8 +694,9 @@ body {
 #img2 {
     height: 50vh;
     width: 50vw;
-    background-image: url(./Screenshot\ 2025-04-11\ 080839.png);
+    background-image: url(./Screenshot\ 2025-05-25\ 153722.png);
     background-size: cover;
+    background-position: center;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -883,9 +884,100 @@ body {
 
 .container6 h1 {
     font-size: 5vw;
-    color: white;
+    color: #B7AB98;
     font-family: Gilroy;
     font-weight: lighter;
+}
+
+.main1 {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 13, 13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main1 #contact-form {
+    background: rgba(255, 255, 255, 0.058);
+    border-radius: 20px;
+    padding: 40px;
+    width: 300px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.091);
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent),
+        rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.117), transparent);
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+}
+
+#contact-form:hover::before {
+    left: 150%;
+}
+
+#contact-form p {
+    font-family: Gilroy;
+    letter-spacing: .5px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#contact-form input,
+#contact-form textarea {
+    font-family: Gilroy;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.063);
+    color: white;
+}
+
+#contact-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#contact-form textarea {
+    min-height: 80px;
+}
+
+#contact-form button {
+    font-family: Gilroy;
+    font-weight: 200;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.063);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    /* background-color: #0f4acc; */
+    background-color: #b19a76c2;
 }
 
 
@@ -893,7 +985,7 @@ body {
 
 
 
-/*         responsive portion            */
+/*---------------------------------------------------- responsive portion ------------------------------------------------------------ */
 
 
 
@@ -1093,6 +1185,7 @@ body {
 
     #img {
         margin-top: 10vh;
+         background-position: 52% 0%;
         height: 40vh;
         width: 50vw;
     }
@@ -1158,11 +1251,59 @@ body {
     .container6 h1 {
         font-size: 3.5vw;
         letter-spacing: .1vw;
-        color: white;
+        color: #B7AB98;
         text-transform: capitalize;
         font-weight: 100;
         font-family: Gilroy;
         font-weight: lighter;
+    }
+
+
+    .main1 #contact-form {
+        background: rgba(255, 255, 255, 0.058);
+        border-radius: 20px;
+        padding: 30px;
+        width: 250px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.091);
+        background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent),
+            rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        margin-bottom: -35vh;
+    }
+
+    #contact-form p {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-family: Gilroy;
+        width: 100%;
+        padding: 10px;
+        margin: 7px 0;
+    }
+
+    #contact-form input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #contact-form textarea {
+        min-height: 80px;
+    }
+
+    #contact-form button {
+        font-family: Gilroy;
+        font-weight: 200;
+        width: 100%;
+        padding: 10px;
+        margin-top: 13px;
+    }
+
+    #contact-form button:hover {
+        background-color: #c2aa87c2;
     }
 
 }

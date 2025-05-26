@@ -368,16 +368,16 @@ image.addEventListener("mouseenter", function () {
     cursor.style.transform = "translate(10%, 100%)"
     cursor.style.transition = "all ease .1s"
     cursor.style.border = "1px solid white"
-    cursor.style.height = "70px"
-    cursor.style.width = "  70px"
+    cursor.style.height = "60px"
+    cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
 })
 
 image.addEventListener("mouseleave", function () {
     cursor.style.backgroundColor = "rgb(235, 89, 57)"
     cursor.style.border = "none"
-    cursor.style.height = "20px"
-    cursor.style.width = "20px"
+    cursor.style.height = "10px"
+    cursor.style.width = "10px"
 })
 
 let img = document.querySelector(".container3 #img")
@@ -401,16 +401,16 @@ img.addEventListener("mouseenter", function () {
     cursor.style.transform = "translate(10%, 100%)"
     cursor.style.transition = "all ease .1s"
     cursor.style.border = "1px solid black"
-    cursor.style.height = "70px"
-    cursor.style.width = "  70px"
+    cursor.style.height = "60px"
+    cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
 })
 
 img.addEventListener("mouseleave", function () {
     cursor.style.backgroundColor = "rgb(235, 89, 57)"
     cursor.style.border = "none"
-    cursor.style.height = "20px"
-    cursor.style.width = "20px"
+    cursor.style.height = "10px"
+    cursor.style.width = "10px"
 })
 
 let img2 = document.querySelector(".container3 #img2")
@@ -434,16 +434,16 @@ img2.addEventListener("mouseenter", function () {
     cursor.style.transform = "translate(10%, 100%)"
     cursor.style.transition = "all ease .1s"
     cursor.style.border = "1px solid black"
-    cursor.style.height = "70px"
-    cursor.style.width = "  70px"
+    cursor.style.height = "60px"
+    cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
 })
 
 img2.addEventListener("mouseleave", function () {
     cursor.style.backgroundColor = "rgb(235, 89, 57)"
     cursor.style.border = "none"
-    cursor.style.height = "20px"
-    cursor.style.width = "20px"
+    cursor.style.height = "10px"
+    cursor.style.width = "10px"
 })
 
 let text_wrapper = document.querySelectorAll(".container4 #text_wrapper span")
@@ -528,5 +528,26 @@ gsap.to(component_4, {
         scrub: 3
     }
 })
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent page reload
+
+    const form = this;
+    const button = form.querySelector('button');
+    button.textContent = 'Sending...';
+
+    emailjs.sendForm('service_zugg937', 'template_i60tnfa', form)
+        .then(function() {
+            alert('✅ Message sent successfully!');
+            button.textContent = 'Send';
+            form.reset();
+        }, function(error) {
+            console.error('EmailJS Error:', error);
+            alert('❌ Failed to send message. Please try again.');
+            button.textContent = 'Send';
+        });
+});
+
 
 
