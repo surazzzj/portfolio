@@ -128,7 +128,9 @@ function cursorEffect() {
     body.addEventListener("mousemove", function (dets) {
         gsap.to("#cursor", {
             x: dets.x,
-            y: dets.y
+            y: dets.y,
+            duration: 0.2,
+            ease: "power1.out"
         })
     })
 
@@ -149,48 +151,52 @@ function cursorEffect() {
 cursorEffect();
 
 gsap.from("#overlay_1", {
-    width: "67vw",
+    // width: "70vw",
+    width: "90vw",
     left: "0%",
     scrollTrigger: {
         trigger: "#overlay_1",
         scroller: "body",
-        start: "top 120%",
+        start: "top 80%",
         end: "bottom 10%",
         scrub: 3
     }
 })
 
 gsap.from("#overlay_2", {
-    width: "66vw",
+    // width: "66vw",
+    width: "90vw",
     left: "0%",
     scrollTrigger: {
         trigger: "#overlay_2",
         scroller: "body",
-        start: "top 120%",
+        start: "top 80%",
         end: "bottom 10%",
         scrub: 3
     }
 })
 
 gsap.from("#overlay_3", {
-    width: "60vw",
+    // width: "60vw",
+    width: "90vw",
     left: "0%",
     scrollTrigger: {
         trigger: "#overlay_3",
         scroller: "body",
-        start: "top 120%",
+        start: "top 80%",
         end: "bottom 10%",
         scrub: 3
     }
 })
 
 gsap.from("#overlay_4", {
-    width: "65vw",
+    // width: "65vw",
+    width: "90vw",
     left: "0%",
     scrollTrigger: {
         trigger: "#overlay_4",
         scroller: "body",
-        start: "top 120%",
+        start: "top 80%",
         end: "bottom 10%",
         scrub: 3
     }
@@ -350,7 +356,7 @@ sec6.addEventListener("mouseleave", function () {
 
 let image = document.querySelector(".container3 #image")
 gsap.from(image, {
-    y:-100,
+    y: -100,
     opacity: 0,
     scale: 0.5,
     // transform: "translate(-50%, -50%)",
@@ -371,6 +377,11 @@ image.addEventListener("mouseenter", function () {
     cursor.style.height = "60px"
     cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
+    cursor.innerHTML = "click"
+    cursor.style.backgroundColor = "white"
+    cursor.style.color = "black"
+    cursor.style.fontFamily = "Roboto"
+    cursor.style.fontSize = "18px"
 })
 
 image.addEventListener("mouseleave", function () {
@@ -378,6 +389,7 @@ image.addEventListener("mouseleave", function () {
     cursor.style.border = "none"
     cursor.style.height = "10px"
     cursor.style.width = "10px"
+    cursor.innerHTML = ""
 })
 
 let img = document.querySelector(".container3 #img")
@@ -404,6 +416,11 @@ img.addEventListener("mouseenter", function () {
     cursor.style.height = "60px"
     cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
+    cursor.innerHTML = "click"
+    cursor.style.backgroundColor = "#0D0D0D"
+    cursor.style.color = "white"
+    cursor.style.fontFamily = "Roboto"
+    cursor.style.fontSize = "18px"
 })
 
 img.addEventListener("mouseleave", function () {
@@ -411,6 +428,7 @@ img.addEventListener("mouseleave", function () {
     cursor.style.border = "none"
     cursor.style.height = "10px"
     cursor.style.width = "10px"
+    cursor.innerHTML = ""
 })
 
 let img2 = document.querySelector(".container3 #img2")
@@ -421,7 +439,7 @@ gsap.from(img2, {
     rotate: "70deg",
     transform: "translate(-50%, -50%)",
     scrollTrigger: {
-        trigger: img,
+        trigger: img2,
         scroller: "body",
         start: "top 60%",
         end: "bottom 80%",
@@ -433,10 +451,15 @@ img2.addEventListener("mouseenter", function () {
     cursor.style.backgroundColor = "transparent"
     cursor.style.transform = "translate(10%, 100%)"
     cursor.style.transition = "all ease .1s"
-    cursor.style.border = "1px solid black"
+    cursor.style.border = "1px solid white"
     cursor.style.height = "60px"
     cursor.style.width = "  60px"
     cursor.style.borderRadius = "100%"
+    cursor.innerHTML = "click"
+    cursor.style.backgroundColor = "#0D0D0D"
+    cursor.style.color = "white"
+    cursor.style.fontFamily = "Roboto"
+    cursor.style.fontSize = "18px"
 })
 
 img2.addEventListener("mouseleave", function () {
@@ -444,6 +467,7 @@ img2.addEventListener("mouseleave", function () {
     cursor.style.border = "none"
     cursor.style.height = "10px"
     cursor.style.width = "10px"
+    cursor.innerHTML = ""
 })
 
 let text_wrapper = document.querySelectorAll(".container4 #text_wrapper span")
@@ -530,7 +554,7 @@ gsap.to(component_4, {
 })
 
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault(); // prevent page reload
 
     const form = this;
@@ -538,11 +562,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     button.textContent = 'Sending...';
 
     emailjs.sendForm('service_zugg937', 'template_i60tnfa', form)
-        .then(function() {
+        .then(function () {
             alert('✅ Message sent successfully!');
             button.textContent = 'Send';
             form.reset();
-        }, function(error) {
+        }, function (error) {
             console.error('EmailJS Error:', error);
             alert('❌ Failed to send message. Please try again.');
             button.textContent = 'Send';
