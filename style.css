@@ -303,6 +303,7 @@ body {
     font-family: gilroy;
     color: rgb(183, 171, 152);
     position: relative;
+    z-index: 9;
 }
 
 #para_one span {
@@ -325,6 +326,7 @@ body {
     font-family: gilroy;
     color: rgb(183, 171, 152);
     position: relative;
+    z-index: 9;
 }
 
 #para_four {
@@ -337,7 +339,7 @@ body {
 }
 
 #overlay_1 {
-    height: 12vh;
+    height: 14vh;
     width: 0vw;
     position: relative;
     left: 100%;
@@ -346,7 +348,7 @@ body {
     /* left: 64.5%; */
     margin-left: 15vw;
     margin-top: -11vh;
-    z-index: 9;
+    z-index: 99;
 }
 
 #overlay_2 {
@@ -362,7 +364,7 @@ body {
 }
 
 #overlay_3 {
-    height: 10vh;
+    height: 12vh;
     width: 0vw;
     position: relative;
     background-color: rgb(13, 13, 13);
@@ -371,6 +373,7 @@ body {
     left: 100%;
     margin-left: 15vw;
     margin-top: -8.5vh;
+    z-index: 99;
 }
 
 #overlay_4 {
@@ -1128,7 +1131,7 @@ body {
 
 #contact-form p {
     font-family: Gilroy;
-    letter-spacing: .5px;
+    color: linear-gradient(white,blue);
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
