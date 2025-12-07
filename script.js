@@ -18,6 +18,7 @@ gsap.to("#border i", {
 
 let element = document.querySelector("#element")
 let border = document.querySelector("#border")
+let m_toggle = document.querySelector(".music-btn")
 
 gsap.to("#border", {
     borderRadius: "50%",
@@ -25,6 +26,10 @@ gsap.to("#border", {
     backgroundColor: "black",
     duration: "2"
 })
+
+let social_icon = document.querySelector("#left_side #social");
+let right_icon = document.querySelector("#right_side #section");
+
 
 let elemp = document.querySelector("#element p")
 element.addEventListener("click", function () {
@@ -35,8 +40,17 @@ element.addEventListener("click", function () {
         duration: 1
     })
 
+    setTimeout(() => {
+        m_toggle.style.opacity = "1"
+        m_toggle.style.transition = "all ease 1s"
+        social_icon.style.display = "flex"
+        social_icon.style.transition = "all ease 3s"
+        right_icon.style.display = "flex"
+        right_icon.style.transition = "all ease 3s"
+    }, 2000)
+
     body.style.overflow = "auto"
-    border.style.display = "none";
+    border.style.display = "none"
     elemp.style.color = "transparent"
 
     gsap.to("#element", {
@@ -553,10 +567,45 @@ gsap.to(component_4, {
     }
 })
 
+const audio = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-button");
+let isPlaying = false;
+
+audio.volume = 0.12;
+document.addEventListener("click", function startMusicOnce() {
+    playMusic();
+    document.removeEventListener("click", startMusicOnce);
+});
+
+musicBtn.addEventListener("click", () => {
+    if (isPlaying) pauseMusic();
+    else playMusic();
+});
+
+function playMusic() {
+    audio.play().then(() => {
+        musicBtn.classList.remove("paused");
+        isPlaying = true;
+    }).catch(err => console.log("Autoplay blocked:", err));
+}
+
+function pauseMusic() {
+    audio.pause();
+    musicBtn.classList.add("paused");
+    isPlaying = false;
+}
+
+window.addEventListener("blur", () => {
+    pauseMusic();
+});
+
+window.addEventListener("focus", () => {
+    if (!audio.paused) return;
+    playMusic();
+});
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // prevent page reload
-
+    event.preventDefault();
     const form = this;
     const button = form.querySelector('button');
     button.textContent = 'Sending...';
@@ -572,7 +621,6 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             button.textContent = 'Send';
         });
 });
-
 
 
 

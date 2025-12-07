@@ -9,10 +9,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" style="background-size: cover;" href="https://images.unsplash.com/photo-1569002929910-610ec9031295?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" type="image/x-icon">
+    <link rel="shortcut icon" style="background-size: cover;"
+        href="https://images.unsplash.com/photo-1569002929910-610ec9031295?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D"
+        type="image/x-icon">
 </head>
 
 
@@ -26,6 +29,16 @@
 
 
 <body>
+    <audio id="bg-music" loop>
+        <source src="./unforgettable.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="music-button" class="music-btn">
+        <div class="bars">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
     <div id="cursor"></div>
 
     <div id="animation">
@@ -332,7 +345,7 @@
     <div class="main1">
         <h1>Get in Touch</h1>
         <form id="contact-form">
-            <p>Let's connect</p>
+            <p>Let's <span>connect</span></p>
             <input type="text" name="user_name" placeholder="Your Name" required />
             <input type="email" name="user_email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message" required></textarea>
