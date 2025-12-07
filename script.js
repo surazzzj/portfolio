@@ -41,8 +41,8 @@ element.addEventListener("click", function () {
     })
 
     setTimeout(() => {
-        m_toggle.style.opacity = "1"
-        m_toggle.style.transition = "all ease 1s"
+        m_toggle.style.display = "flex"
+        m_toggle.style.transition = "all ease 3s"
         social_icon.style.display = "flex"
         social_icon.style.transition = "all ease 3s"
         right_icon.style.display = "flex"
