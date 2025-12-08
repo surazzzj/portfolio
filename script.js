@@ -43,10 +43,10 @@ element.addEventListener("click", function () {
     setTimeout(() => {
         m_toggle.style.display = "flex"
         m_toggle.style.transition = "all ease 3s"
-        social_icon.style.display = "flex"
-        social_icon.style.transition = "all ease 3s"
-        right_icon.style.display = "flex"
-        right_icon.style.transition = "all ease 3s"
+        // social_icon.style.display = "flex"
+        // social_icon.style.transition = "all ease 3s"
+        // right_icon.style.display = "flex"
+        // right_icon.style.transition = "all ease 3s"
     }, 2000)
 
     body.style.overflow = "auto"
@@ -118,6 +118,23 @@ element.addEventListener("click", function () {
         transition: "all ease 2s"
     })
 })
+
+const animation_div = document.querySelector("#animation");
+const main_div = document.querySelector(".main");
+animation_div.addEventListener("mouseenter", function (dets) {
+   social_icon.style.opacity = 0;
+    right_icon.style.opacity = 0;
+      social_icon.style.transition = "all ease 1s";
+    right_icon.style.transition = "all ease 1s";
+})
+
+animation_div.addEventListener("mouseleave", function (dets) {
+   social_icon.style.opacity = 1;
+    right_icon.style.opacity = 1;
+     social_icon.style.transition = "all ease 3s";
+    right_icon.style.transition = "all ease 3s";
+})
+
 
 let sec2 = document.querySelector("#section_2")
 let sec3 = document.querySelector("#section_3")

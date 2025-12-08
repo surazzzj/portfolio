@@ -134,8 +134,8 @@ body {
 }
 
 #left_side #social {
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     flex-direction: column;
     gap: 1vh;
     font-weight: lighter;
@@ -143,7 +143,8 @@ body {
     color: rgb(145, 135, 121);
     margin-left: -2vw;
     position: fixed;
-    z-index: 999999;
+    /* z-index: 999999; */
+    z-index: 999;
 }
 
 #social a {
@@ -162,14 +163,15 @@ body {
 }
 
 #section {
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1vh;
     position: fixed;
-    z-index: 999999;
+    /* z-index: 999999; */
+    z-index: 999;
 }
 
 #section a {
@@ -1629,7 +1631,7 @@ body {
     }
 
     .container1 #para_two {
-        margin-top: -3vh;
+        margin-top: -5vh;
     }
 
     .container1 #para_three {
@@ -1637,7 +1639,7 @@ body {
     }
 
     .container1 #para_four {
-        margin-top: -3vh;
+        margin-top: -5vh;
     }
 
     #overlay_1,
