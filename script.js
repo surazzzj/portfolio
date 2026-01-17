@@ -588,7 +588,7 @@ const audio = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-button");
 let isPlaying = false;
 
-audio.volume = 0.12;
+audio.volume = 0.10;
 document.addEventListener("click", function startMusicOnce() {
     playMusic();
     document.removeEventListener("click", startMusicOnce);
