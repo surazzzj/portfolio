@@ -765,6 +765,10 @@ body {
 }
 
 .container3 #desc_heading #sec_span {
+    color: rgb(255, 202, 196);
+}
+
+.container3 #desc_heading2 #sec_span {
     color: rgb(235, 146, 107);
 }
 
@@ -833,7 +837,8 @@ body {
 
 .container3 .tech_stack2 {
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: start;
     gap: 10px;
 }
@@ -845,7 +850,8 @@ body {
     color: white;
     font-weight: lighter;
     text-align: start;
-    font-size: 17px;
+    font-size: 13px;
+    font-weight: lighter;
 }
 
 #frontend {
@@ -928,7 +934,7 @@ body {
 #img {
     height: 50vh;
     width: 50vw;
-    background-image: url(./Screenshot\ 2025-05-25\ 153634.png);
+    background-image: url(./Screenshot\ 2026-01-31\ 173154.png);
     background-size: cover;
     border-radius: 10px;
     display: flex;
@@ -953,7 +959,7 @@ body {
 #img2 {
     height: 50vh;
     width: 50vw;
-    background-image: url(./Screenshot\ 2025-05-25\ 153722.png);
+    background-image: url(./Screenshot\ 2025-05-25\ 153634.png);
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -1498,6 +1504,11 @@ body {
         padding: 0px 40px;
     }
 
+    /* .container3 #desc_section2 #desc_heading2 {
+        margin-top: 20px;
+        padding: 10px 40px;
+    } */
+
     .container3 #desc_section2 #desc_para {
         margin-top: 10px;
         padding: 0;
@@ -1566,6 +1577,13 @@ body {
         font-size: 1.5vh;
     }
 
+    #innerdiv6 {
+        position: absolute;
+        height: 20vh;
+        top: 14vh;
+        background-color: black;
+    }
+
     .container1 #para_unq {
         font-size: 4.5vw;
         letter-spacing: 1.2vw;
@@ -1585,6 +1603,7 @@ body {
     #para_three,
     #para_four {
         font-size: 5vw;
+        font-weight: 300;
     }
 
     #overlay {
@@ -1627,7 +1646,7 @@ body {
     }
 
     .container1 #para_one span {
-        font-size: 5vw;
+        font-size: 7vw;
     }
 
     .container1 #para_two {
@@ -1766,7 +1785,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: start;
-        gap: 122px;
+        gap: 80px;
     }
 
     .container3 .tech_stack p {
@@ -1793,9 +1812,10 @@ body {
 
     .container3 .tech_stack2 {
         display: flex;
-        justify-content: start;
+        flex-direction: row;
+        justify-content: center;
         align-items: start;
-        gap: 10px;
+        gap: 110px;
     }
 
     .container3 .tech_stack2 p {
@@ -1871,7 +1891,7 @@ body {
 
     #img {
         margin-top: 10vh;
-        background-position: 52% 0%;
+        background-position: left;
         height: 40vh;
         width: 82vw;
         overflow: hidden;
