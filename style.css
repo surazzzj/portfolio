@@ -1603,7 +1603,7 @@ body {
     #para_three,
     #para_four {
         font-size: 5vw;
-        font-weight: 300;
+        font-weight: 500;
     }
 
     #overlay {
@@ -1777,7 +1777,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: start;
-        gap: 80px;
+        gap: 60px;
     }
 
     .container3 .tech_stack1 {
@@ -1785,7 +1785,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: start;
-        gap: 80px;
+        gap: 60px;
     }
 
     .container3 .tech_stack p {
