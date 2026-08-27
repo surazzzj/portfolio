@@ -8,4 +8,4 @@ ______________________________________
 
 
 Live Demo 🚀
-https://updatedportfoliofinal.netlify.app/
+https://updatedportfoliofinal.netlify.app
